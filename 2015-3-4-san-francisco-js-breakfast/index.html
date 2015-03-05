@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Continuous Deployment and Immutable Builds</h1>
+		<p>Kyle Mathews — Founder @ RelateRocket</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Continuous Deployment and Immutable Builds</h2>
+		<img src="pictures/JazzAutomationCog2.jpg" alt="" style="opacity: 0.7;">
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:120px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide cover picture" id="Picture"><div>
+		<h2 style="color: white">A bit about me</h2>
+		<img src="pictures/picture.jpg" alt />
+	</div></section>
+	<section class="slide"><div>
+		<h2>Founder @ RelateRocket</h2>
+		<ul>
+			<li>Sales acceleration SaaS company based here in SF</li>
+			<li>in Private Beta</li>
+			<li>Easiest way to send personalized content to your prospects.</li>
+		</ul>
+    <p>
+      <a href="https://relaterocket.co">relaterocket.co</a><br />
+      <a href="mailto:kyle@relaterocket.co">kyle@relaterocket.co</a>
+    </p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Sunsetjs</h2>
+    <p>A weekly free + public hangout for JavaScript enthusiasts in Inner Sunset, San Francisco, California. No presentations, RSVPs or startup pitches/overt recruiting allowed. Just show up and talk, learn, and hack!</p>
+    <p><a href="http://sunsetjs.com/">http://sunsetjs.com/</a></p>
+	</div></section>
+	<section class="slide cover" id="Cover2"><div>
+		<h2>Continuous Deployment and Immutable Builds</h2>
+		<img src="pictures/JazzAutomationCog2.jpg" alt="" style="opacity: 0.7;">
+		<style>
+			#Cover2 h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:120px;
+				}
+			#Cover2 p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover2 p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Reducing complexity</h2>
+		<figure>
+			<blockquote>
+				<p>There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies and the other way is to make it so complicated that there are no obvious deficiencies.</p>
+			</blockquote>
+			<figcaption>— C.A.R. Hoare, The 1980 ACM Turing Award Lecture</figcaption>
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Reducing complexity</h2>
+		<figure>
+			<blockquote>
+				<p>Controlling complexity is the essence of computer programming.</p>
+			</blockquote>
+			<figcaption>— Brian Kernighan</figcaption>
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Why continous depoyment?</h2>
+		<ol>
+			<li class="next">Deliver value faster</li>
+			<li class="next">Fix bugs faster</li>
+      <li class="next">More deploys means more automation and fewer errors</li>
+    </ol>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Design/Write/Deploy software in small batches</h2>
+		<ul>
+			<li class="next">Small batches mean faster feedback</li>
+			<li class="next">Small batches mean problems are instantly localized</li>
+			<li class="next">Small batches reduce risk</li>
+			<li class="next">Small batches reduce overhead</li>
+		</ul>
+    <ul>
+      <li><a href="http://www.startuplessonslearned.com/2009/02/work-in-small-batches.html">Work in Small Batches — startuplessonslearned.com</a><br /></li>
+      <li><a href="http://www.amazon.com/gp/product/1935401009">Book: The Principles of Product Development Flow</a></li>
+    </ul>
+	</div></section>
+
+
+	<section class="slide cover picture"><div>
+		<h2 style="color: white">Immutable deploys</h2>
+		<img src="pictures/picture.jpg" alt />
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>The case for immutability</h2>
+		<figure>
+			<blockquote>
+				<p>Much of what makes application development difficult is tracking mutation and maintaining state. Developing with immutable data encourages you to think differently about how data flows through your application.</p>
+			</blockquote>
+      <figcaption><a href="http://facebook.github.io/immutable-js/">http://facebook.github.io/immutable-js/</a></figcaption>
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Mutable infrastructure</h2>
+		<ul>
+			<li class="next">Anyone with SSH can change production code (happens)</li>
+			<li class="next">Deploys that overwrite old files might not make clean update</li>
+			<li class="next">Risk of css/js build failing leaving broken css or weird JS errors in production (happened all the time at last startup)</li>
+			<li class="next">Rolling back code isn't clean or fast without complicated backup scheme</li>
+			<li class="next">Testing is hard</li>
+		</ul>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Immutable infrastructure (with Docker)</h2>
+		<ul>
+			<li class="next">Can't change system once its built. If you need to change it, deploy a new system.</li>
+			<li class="next">Easy to test image once built to ensure it'll work as expected</li>
+			<li class="next">Rolling back is trivial</li>
+			<li class="next">Crash only architecture. Stuff is going to break, have bugs, need updates. Make it really easy to throw away the old and bring in the new.</li>
+		</ul>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>React Responsive Grid — Powertools for building responsive layouts in React</h2>
+		<ul>
+      <li><a href="https://kyleamathews.github.io/react-headroom">http://kyleamathews.github.io/react-responsive-grid/examples/</a></li>
+      <li><a href="https://kyleamathews.github.io/react-headroom">https://github.com/KyleAMathews/react-responsive-grid</a></li>
+		</ul>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>React Headroom</h2>
+		<ul>
+      <li><a href="https://kyleamathews.github.io/react-headroom">https://github.com/KyleAMathews/react-headroom</a></li>
+      <li><a href="https://kyleamathews.github.io/react-headroom">https://kyleamathews.github.io/react-headroom</a></li>
+		</ul>
+	</div></section>
+
+
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
